@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react';
+ 
+import { useState, useEffect } from 'react';
 import { 
   Code, 
   User, 
@@ -8,7 +9,6 @@ import {
   ExternalLink, 
   Github, 
   Linkedin, 
-  Mail, 
   MapPin, 
   Calendar,
   ChevronDown,
@@ -122,18 +122,28 @@ function App() {
       skills: ['Automotive Engineering', 'Mechanical Systems']
     }
   ];
-
   const certifications = [
-    'MathWorks - MATLAB Onramp',
-    'Cognitive Class - Data Science 101',
     'Cognitive Class - Python 101 for Data Science',
-    'HackerRank - Java (Basic)',
+    'Cognitive Class - SQL and Relational Databases 101',
+    'HackerRank - Problem Solving (Basic)',
     'HackerRank - Python (Basic)',
     'HackerRank - SQL (Basic)',
+    'MathWorks - MATLAB Onramp',
+    'MathWorks - Calculations with Vectors and Matrices',
+    'Cognitive Class - Data Science Tools',
+    'Cognitive Class - Data Science 101',
+    'Simplilearn - Business Analytics with Excel Beginner Course',
+    'Simplilearn - Introduction to MS Excel',
+    'Forage - Deloitte Australia Data Analytics Job Simulation',
+    'Forage - Deloitte Australia Cyber Job Simulation',
     'Bosch Rexroth - Industrial Automation',
     'Pupilfirst - Web Development 101',
-    'SEBI - Investor Certification',
-    'Deloitte - Data Analytics Job Simulation'
+    'HackerRank - Java (Basic)',
+    'Canva - Graphic Design Essentials',
+    'ASME CET - Ansys Simulation Workshop',
+    'Cognitive Class - R for Data Science',
+    'National Institute of Securities Markets (NISM) - SEBI Investor Certification',
+    'College of Engineering Trivandrum - DRISHTI 24 Sponsorship Volunteer'
   ];
 
   return (
