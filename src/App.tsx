@@ -373,10 +373,7 @@ function App() {
       description:
         "A secure, multi-tenant placement portal connecting students, recruiters, and admins with tenant-aware access, audit-ready workflows, and customizable dashboards.",
       features: [
-        {
-          title: "🔐 Multi-Tenant Architecture",
-          detail: "Tenant-aware access control with isolated data via PostgreSQL RLS",
-        },
+        
         {
           title: "👥 Role-Based Access",
           detail: "Granular permissions for Platform Admin, Tenant Admin, Recruiter, and Student",
