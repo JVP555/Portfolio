@@ -628,7 +628,6 @@ function App() {
                     PALLIYAN
                   </span>
                 </h1>
-                <p className="text-lg md:text-xl text-gray-400 mb-2">He / Him</p>
 
                 <div className="flex items-center justify-center space-x-3 text-md md:text-lg text-[#D4AF37] font-semibold mb-10">
                   <Star size={18} className="text-[#D4AF37]" />
