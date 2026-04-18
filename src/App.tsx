@@ -368,6 +368,56 @@ function App() {
 
   const projects = [
     {
+      title: "Freshire – Campus Placement Portal",
+      date: "Nov 2025 - Present",
+      description:
+        "A secure, multi-tenant placement portal connecting students, recruiters, and admins with tenant-aware access, audit-ready workflows, and customizable dashboards.",
+      features: [
+        {
+          title: "🔐 Multi-Tenant Architecture",
+          detail: "Tenant-aware access control with isolated data via PostgreSQL RLS",
+        },
+        {
+          title: "👥 Role-Based Access",
+          detail: "Granular permissions for Platform Admin, Tenant Admin, Recruiter, and Student",
+        },
+        {
+          title: "📊 Interactive Dashboards",
+          detail: "Real-time placement analytics with Recharts visualizations",
+        },
+        {
+          title: "📝 Dynamic Forms Builder",
+          detail: "Admin-configurable forms with JSONB field configurations",
+        },
+        {
+          title: "🕵️ Audit Logging",
+          detail: "Compliance-ready audit trail for all admin actions",
+        },
+        {
+          title: "📧 Mail Management",
+          detail: "IMAP email sync with read receipts and attachments",
+        },
+        {
+          title: "🎨 Glassmorphism UI",
+          detail: "Modern frosted glass aesthetic with animated wavy backgrounds",
+        },
+        {
+          title: "📱 Responsive Design",
+          detail: "Mobile-first with desktop-optimized table views",
+        },
+      ],
+      techStack: [
+        "React 18",
+        "Vite",
+        "Tailwind CSS",
+        "Supabase",
+        "PostgreSQL",
+        "Recharts",
+        "TanStack Table",
+        "Vercel",
+      ],
+    },
+    {
       title: "Smarter Tasks – Task & Project Management Platform",
       date: "May 2025 - Jun 2025",
       description:
