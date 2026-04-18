@@ -693,7 +693,7 @@ function App() {
                 <blockquote className="text-2xl md:text-3xl font-medium text-white text-center italic mb-6">
                   "They call me the Joker. Perfect. No other card can do what I can."
                 </blockquote>
-                <p className="text-center text-[#D4AF37] font-bold text-lg">— JIL</p>
+                <p className="text-center text-[#D4AF37] font-bold text-lg">— Jil Varghese Palliyan</p>
               </div>
 
               <div className="grid md:grid-cols-2 gap-12 items-start mb-20">
