@@ -691,7 +691,7 @@ function App() {
             <div className="max-w-5xl mx-auto">
               <div className="bg-gradient-to-r from-#D4AF37/10 to-#8B7020/10 rounded-2xl p-8 mb-12 border border-[#D4AF37]/20">
                 <blockquote className="text-2xl md:text-3xl font-medium text-white text-center italic mb-6">
-                  "The joker isn't the odd one out. It's the only card that can be every other."
+                  "They call me the Joker. Perfect. No other card can do what I can."
                 </blockquote>
                 <p className="text-center text-[#D4AF37] font-bold text-lg">— JIL</p>
               </div>
