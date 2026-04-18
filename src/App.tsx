@@ -674,7 +674,7 @@ function App() {
                 onClick={() => scrollToSection('about')}
                 className="animate-bounce text-[#D4AF37] hover:text-#C5A028 transition-colors"
               >
-                <ChevronDown size={40} />
+                <ChevronDown size={40} className="text-[#D4AF37]" />
               </button>
             </div>
           </div>
@@ -794,7 +794,7 @@ function App() {
                     <div className="flex items-start space-x-6">
                       <div className="flex-shrink-0">
                         <div className="w-16 h-16 bg-gradient-to-br from-#D4AF37 to-#8B7020 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                          <Briefcase className="text-black" size={28} />
+                          <Briefcase className="text-white" size={28} />
                         </div>
                       </div>
                       <div className="flex-grow">
@@ -848,7 +848,7 @@ function App() {
                     <div className="flex items-start space-x-6">
                       <div className="flex-shrink-0">
                         <div className="w-16 h-16 bg-gradient-to-br from-#D4AF37 to-#8B7020 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                          <GraduationCap className="text-black" size={28} />
+                          <GraduationCap className="text-white" size={28} />
                         </div>
                       </div>
                       <div className="flex-grow">
@@ -899,7 +899,7 @@ function App() {
                   <div className="flex items-start space-x-6">
                     <div className="flex-shrink-0">
                       <div className="w-20 h-20 bg-gradient-to-br from-#D4AF37 to-#8B7020 rounded-2xl flex items-center justify-center">
-                        <Code className="text-black" size={40} />
+                        <Code className="text-white" size={40} />
                       </div>
                     </div>
 
@@ -965,7 +965,7 @@ function App() {
                     <div className="flex items-start space-x-4">
                       <div className="flex-shrink-0">
                         <div className="w-12 h-12 bg-gradient-to-br from-#D4AF37 to-#8B7020 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                          <Award className="text-black" size={24} />
+                          <Award className="text-white" size={24} />
                         </div>
                       </div>
                       <div>
