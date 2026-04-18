@@ -2,7 +2,6 @@
 import { useState, useEffect } from 'react';
 import { 
   Code, 
-  User, 
   Briefcase, 
   GraduationCap, 
   Award, 
@@ -17,6 +16,7 @@ import {
   Star,
   ArrowRight
 } from 'lucide-react';
+import logoImg from '../logo.png';
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -63,12 +63,11 @@ function App() {
   ];
 
   const skillGroups = {
-    "Programming Languages": ['Python', 'Java', 'C Programming', 'JavaScript'],
-    "Web & Full-Stack": ['React', 'Node.js', 'HTML/CSS'],
-    "Databases & Querying": ['SQL', 'MySQL', 'PostgreSQL'],
-    "Engineering & Automation": ['MATLAB', 'Industrial Automation', 'PLC Programming'],
-    "Data & Analytics": ['Machine Learning', 'Data Science', 'Tableau'],
-    "Tools & Utilities": ['Git/GitHub', 'Microsoft Excel', 'Problem Solving']
+    "Languages": ['Python', 'Java', 'C', 'C++', 'JavaScript', 'TypeScript', 'SQL'],
+    "Frameworks": ['Node.js', 'Express.js', 'React.js', 'NestJS', 'Tailwind CSS'],
+    "Databases & Tools": ['PostgreSQL', 'MongoDB', 'Git', 'Docker', 'Linux', 'Postman'],
+    "Concepts": ['Data Structures & Algorithms', 'OOP', 'DBMS', 'OS', 'System Design', 'REST APIs', 'CI/CD'],
+    "Specializations": ['Machine Learning (RAG)', 'Vector Search', 'Backend Systems', 'AI-driven Applications']
   };
 
   const getCategoryIcon = (category: string) => {
@@ -95,54 +94,117 @@ function App() {
 
   const experiences = [
     {
-      company: 'IVAEX',
-      role: 'Digital Literacy Camp - Promoter',
-      duration: 'Apr 2025 - Present',
+      company: 'Phorena (Skyber Research)',
+      role: 'Team Lead – RAG Systems',
+      duration: 'Dec 2025 - Present',
       location: 'Remote',
+      type: 'Full-time',
+      skills: ['RAG Systems', 'Vector Search', 'Embeddings', 'AI/ML', 'Team Leadership'],
+      description: 'Leading development of scalable RAG systems processing 300+ documents/min. Improved semantic search accuracy by 25% through embedding optimization and vector indexing. Architected modular pipelines for document ingestion, chunking, and retrieval.'
+    },
+    {
+      company: 'Phorena (Skyber Research)',
+      role: 'AI Engineer – RAG',
+      duration: 'Aug 2025 - Dec 2025',
+      location: 'Remote',
+      type: 'Full-time',
+      skills: ['RAG', 'Embeddings', 'Vector Databases', 'Semantic Search'],
+      description: 'Built and optimized RAG pipelines for document understanding and semantic search. Worked on embeddings, vector databases, and retrieval optimization techniques.'
+    },
+    {
+      company: 'PgBee',
+      role: 'Backend Developer Intern – Phase 2',
+      duration: 'Apr 2026 - Present',
+      location: 'Trivandrum, Kerala (Hybrid)',
+      type: 'Internship',
+      skills: ['Node.js', 'Backend APIs', 'Database Optimization', 'System Architecture'],
+      description: 'Developing scalable backend services and APIs with improved performance and reliability. Optimizing database queries and system architecture for production workloads.'
+    },
+    {
+      company: 'PgBee',
+      role: 'Backend Developer Intern – Phase 1',
+      duration: 'Dec 2025 - Apr 2026',
+      location: 'Trivandrum, Kerala (Hybrid)',
+      type: 'Internship',
+      skills: ['Node.js', 'REST APIs', 'Backend Development'],
+      description: 'Built REST APIs using Node.js and contributed to backend feature development. Collaborated with teams to improve system stability and scalability.'
+    },
+    {
+      company: 'Freshire',
+      role: 'Project Lead & Full Stack Developer',
+      duration: 'Nov 2025 - Present',
+      location: 'Trivandrum, Kerala (On-site)',
+      type: 'Full-time',
+      skills: ['Supabase', 'Multi-tenant Architecture', 'Full-Stack', 'Authentication'],
+      description: 'Built a role-based campus placement platform for students, recruiters, and administrators. Implemented multi-tenant architecture and secure authentication using Supabase.'
+    },
+    {
+      company: 'College of Engineering Trivandrum',
+      role: 'Placement Coordinator – CSE Batch 2027',
+      duration: 'Oct 2025 - Present',
+      location: 'Trivandrum, Kerala',
       type: 'Part-time',
-      skills: ['Marketing', 'Sponsorship'],
-      description: 'Leading promotional activities and securing sponsorships for digital literacy initiatives.'
+      skills: ['Coordination', 'Communication', 'Documentation'],
+      description: 'Facilitate communication between students and placement cell for recruitment processes. Assist peers with placement workflows, documentation, and coordination during drives.'
+    },
+    {
+      company: 'Rehabilitation Plantations Limited',
+      role: 'ERP Full-Stack Developer',
+      duration: 'Aug 2025 - Present',
+      location: 'Punalur, Kerala (Hybrid)',
+      type: 'Full-time',
+      skills: ['PostgreSQL', 'Backend APIs', 'ERP Systems', 'Inventory Management'],
+      description: 'Digitized enterprise workflows including inventory, order, and supply chain systems. Designed PostgreSQL schemas and scalable backend APIs.'
     },
     {
       company: 'IVAEX',
-      role: 'Digital Literacy Camp - Mentor',
+      role: 'Digital Literacy Mentor',
       duration: 'Feb 2025 - Present',
-      location: 'On-site',
+      location: 'Kerala, India',
       type: 'Part-time',
       skills: ['Mentoring', 'Teaching'],
-      description: 'Mentoring students in digital literacy programs and facilitating learning sessions.'
+      description: 'Conduct training sessions and mentor participants in digital literacy programs.'
     },
     {
-      company: 'Bosch Rexroth',
+      company: 'IVAEX',
+      role: 'Digital Literacy Promoter',
+      duration: 'Apr 2025 - Present',
+      location: 'Kerala, India',
+      type: 'Part-time',
+      skills: ['Marketing', 'Outreach'],
+      description: 'Led outreach initiatives improving access to technology education.'
+    },
+    {
+      company: 'Bosch Rexroth (CET CoE)',
       role: 'Industrial Automation Intern',
       duration: 'Jun 2025',
-      location: 'On-site',
+      location: 'Trivandrum, Kerala',
       type: 'Internship',
-      skills: ['Hydraulics', 'Sensorics', 'PLC Programming', 'Pneumatics'],
-      description: 'Gained hands-on experience in industrial automation systems and PLC programming.'
+      skills: ['PLCs', 'Hydraulics', 'Sensors', 'Industrial Automation'],
+      description: 'Worked with PLCs, hydraulics, sensors, and industrial automation systems.'
     }
   ];
 
   const education = [
     {
-      institution: 'College of Engineering Trivandrum',
-      degree: 'B.Tech Major, Computer Science and Engineering',
-      duration: 'Sep 2023 - Sep 2027',
-      grade: 'S CGPA: 9.00/10',
+      institution: 'College of Engineering Trivandrum (CET)',
+      degree: 'B.Tech in Computer Science and Engineering',
+      duration: '2023 -- 2027',
+      grade: 'CGPA: 8.81/10',
       skills: ['Problem Solving', 'Programming', 'Database Management', 'Software Engineering']
     },
     {
-      institution: 'College of Engineering Trivandrum',
+      institution: 'College of Engineering Trivandrum (CET)',
       degree: 'B.Tech Honours, Machine Learning',
-      duration: 'Sep 2024 - Sep 2027',
+      duration: '2024 -- 2027',
       grade: 'Ongoing',
       skills: ['Machine Learning', 'Mathematics', 'Data Analysis']
     },
     {
-      institution: 'College of Engineering Trivandrum',
+      institution: 'College of Engineering Trivandrum (CET)',
       degree: 'B.Tech Minor, Automobile Engineering',
-      duration: 'Jul 2024 - Sep 2027',
-      grade: 'P CGPA: 5.5/10',
+      duration: '2024 -- 2027',
+      grade: 'Ongoing',
       skills: ['Automotive Engineering', 'Mechanical Systems']
     }
   ];
@@ -492,7 +554,7 @@ function App() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex-shrink-0">
-              <h1 className="text-2xl font-bold bg-gradient-to-r from-yellow-400 to-yellow-600 bg-clip-text text-transparent">
+              <h1 className="text-2xl font-bold bg-gradient-to-r from-#D4AF37 to-yellow-600 bg-clip-text text-transparent">
                 JVP
               </h1>
             </div>
@@ -505,8 +567,8 @@ function App() {
                     onClick={() => scrollToSection(item.id)}
                     className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${
                       activeSection === item.id
-                        ? 'text-black bg-yellow-400 shadow-lg shadow-yellow-400/25'
-                        : 'text-gray-300 hover:text-yellow-400 hover:bg-gray-900'
+                        ? 'text-black bg-[#D4AF37] shadow-lg shadow-[#D4AF37]/25'
+                        : 'text-gray-300 hover:text-[#D4AF37] hover:bg-gray-900'
                     }`}
                   >
                     {item.label}
@@ -518,7 +580,7 @@ function App() {
             <div className="md:hidden">
               <button
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
-                className="inline-flex items-center justify-center p-2 rounded-md text-gray-300 hover:text-yellow-400 hover:bg-gray-900 transition-colors"
+                className="inline-flex items-center justify-center p-2 rounded-md text-gray-300 hover:text-#D4AF37 hover:bg-gray-900 transition-colors"
               >
                 {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
               </button>
@@ -536,8 +598,8 @@ function App() {
                   onClick={() => scrollToSection(item.id)}
                   className={`block px-3 py-2 rounded-md text-base font-medium w-full text-left transition-colors ${
                     activeSection === item.id
-                      ? 'text-black bg-yellow-400'
-                      : 'text-gray-300 hover:text-yellow-400 hover:bg-gray-900'
+                      ? 'text-black bg-#D4AF37'
+                      : 'text-gray-300 hover:text-#D4AF37 hover:bg-gray-900'
                   }`}
                 >
                   {item.label}
@@ -556,31 +618,31 @@ function App() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative z-10">
             <div className="text-center">
               <div className="mb-10">
-                <div className="w-40 h-40 mx-auto bg-gradient-to-br from-amber-400 to-amber-600 rounded-full flex items-center justify-center mb-8 shadow-2xl shadow-amber-500/30 backdrop-blur-lg">
-                  <User size={80} className="text-black" />
+                <div className="w-48 h-48 mx-auto rounded-2xl flex items-center justify-center mb-8 shadow-2xl shadow-[#D4AF37]/30 overflow-hidden border-2 border-[#D4AF37]/30">
+                  <img src={logoImg} alt="JVP Logo" className="w-full h-full object-cover" />
                 </div>
 
                 <h1 className="text-4xl md:text-6xl font-extrabold text-white mb-4 leading-tight tracking-tight">
                   JIL VARGHESE
-                  <span className="block bg-gradient-to-r from-amber-400 to-amber-600 bg-clip-text text-transparent">
+                  <span className="block bg-gradient-to-r from-[#D4AF37] via-[#C5A028] to-[#8B7020] bg-clip-text text-transparent">
                     PALLIYAN
                   </span>
                 </h1>
                 <p className="text-lg md:text-xl text-gray-400 mb-2">He / Him</p>
 
-                <div className="flex items-center justify-center space-x-3 text-md md:text-lg text-amber-400 font-semibold mb-10">
-                  <Star size={18} className="text-amber-400" />
-                  <span>Computer Science Student at CET</span>
+                <div className="flex items-center justify-center space-x-3 text-md md:text-lg text-[#D4AF37] font-semibold mb-10">
+                  <Star size={18} className="text-[#D4AF37]" />
+                  <span>Software Engineering Student at CET</span>
                   <span className="text-gray-600">|</span>
-                  <span>Mentor at IVAEX</span>
-                  <Star size={18} className="text-amber-400" />
+                  <span>Backend & AI Systems</span>
+                  <Star size={18} className="text-[#D4AF37]" />
                 </div>
               </div>
 
               <div className="max-w-3xl mx-auto mb-12">
                 <p className="text-lg md:text-xl text-gray-300 leading-relaxed">
-                  Passionate about software, systems, and smart design. Thrives in high-performance, creative, and fast-paced environments.
-                  Blending <span className="text-amber-400 font-medium">tech, logic, and elegance</span> to build better experiences.
+                  Software Engineering student with experience in building scalable backend systems, AI-driven applications, and distributed data pipelines.
+                  Blending <span className="text-[#D4AF37] font-medium">tech, logic, and elegance</span> to build better experiences.
                 </p>
               </div>
 
@@ -589,7 +651,7 @@ function App() {
                   href="https://www.linkedin.com/in/jil-varghese-palliyan/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group inline-flex items-center px-8 py-4 bg-amber-400 text-black font-semibold rounded-lg hover:bg-amber-300 transition-all duration-300 shadow-md hover:shadow-amber-500/40 hover:scale-[1.03]"
+                  className="group inline-flex items-center px-8 py-4 bg-#D4AF37 text-black font-semibold rounded-lg hover:bg-amber-300 transition-all duration-300 shadow-md hover:shadow-amber-500/40 hover:scale-[1.03]"
                 >
                   <Linkedin className="mr-3 group-hover:scale-110 transition-transform" size={24} />
                   Connect on LinkedIn
@@ -600,7 +662,7 @@ function App() {
                   href="https://github.com/JVP555"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group inline-flex items-center px-8 py-4 border-2 border-amber-400 text-amber-400 font-semibold rounded-lg hover:bg-amber-400 hover:text-black transition-all duration-300 hover:scale-[1.03]"
+                  className="group inline-flex items-center px-8 py-4 border-2 border-#D4AF37 text-#D4AF37 font-semibold rounded-lg hover:bg-#D4AF37 hover:text-black transition-all duration-300 hover:scale-[1.03]"
                 >
                   <Github className="mr-3 group-hover:scale-110 transition-transform" size={24} />
                   View GitHub
@@ -610,7 +672,7 @@ function App() {
 
               <button
                 onClick={() => scrollToSection('about')}
-                className="animate-bounce text-amber-400 hover:text-amber-300 transition-colors"
+                className="animate-bounce text-#D4AF37 hover:text-amber-300 transition-colors"
               >
                 <ChevronDown size={40} />
               </button>
@@ -623,20 +685,20 @@ function App() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">About Me</h2>
-              <div className="w-24 h-1 bg-gradient-to-r from-amber-400 to-amber-600 mx-auto"></div>
+              <div className="w-24 h-1 bg-gradient-to-r from-#D4AF37 to-amber-600 mx-auto"></div>
             </div>
 
             <div className="max-w-5xl mx-auto">
-              <div className="bg-gradient-to-r from-amber-400/10 to-amber-600/10 rounded-2xl p-8 mb-12 border border-amber-400/20">
+              <div className="bg-gradient-to-r from-#D4AF37/10 to-amber-600/10 rounded-2xl p-8 mb-12 border border-#D4AF37/20">
                 <blockquote className="text-2xl md:text-3xl font-medium text-white text-center italic mb-6">
                   "It's okay to be known as the joker—it's the only card that can substitute any other."
                 </blockquote>
-                <p className="text-center text-amber-400 font-bold text-lg">— JIL</p>
+                <p className="text-center text-#D4AF37 font-bold text-lg">— JIL</p>
               </div>
 
               <div className="grid md:grid-cols-2 gap-12 items-start mb-20">
                 <div>
-                  <h3 className="text-2xl font-bold text-amber-400 mb-6">My Philosophy</h3>
+                  <h3 className="text-2xl font-bold text-#D4AF37 mb-6">My Philosophy</h3>
                   <p className="text-lg leading-relaxed text-gray-300 mb-6">
                     As a Computer Science Engineering student with a passion for automation, creativity, and adaptability, 
                     I see myself not just as a builder of solutions, but as a wildcard—ready to take on any role, 
@@ -649,24 +711,24 @@ function App() {
                   </p>
                 </div>
 
-                <div className="bg-black/50 rounded-xl p-8 border border-amber-400/20 shadow-inner shadow-amber-300/5">
-                  <h3 className="text-2xl font-bold text-amber-400 mb-6">Quick Facts</h3>
+                <div className="bg-black/50 rounded-xl p-8 border border-#D4AF37/20 shadow-inner shadow-amber-300/5">
+                  <h3 className="text-2xl font-bold text-[#D4AF37] mb-6">Quick Facts</h3>
                   <ul className="space-y-4 text-gray-300">
                     <li className="flex items-center">
-                      <div className="w-2 h-2 bg-amber-400 rounded-full mr-3"></div>
-                      <span>CGPA: 9.00/10 in Computer Science</span>
+                      <div className="w-2 h-2 bg-[#D4AF37] rounded-full mr-3"></div>
+                      <span>CGPA: 8.81/10 in Computer Science</span>
                     </li>
                     <li className="flex items-center">
-                      <div className="w-2 h-2 bg-amber-400 rounded-full mr-3"></div>
-                      <span>Active Mentor at IVAEX</span>
+                      <div className="w-2 h-2 bg-[#D4AF37] rounded-full mr-3"></div>
+                      <span>Team Lead at Phorena (RAG Systems)</span>
                     </li>
                     <li className="flex items-center">
-                      <div className="w-2 h-2 bg-amber-400 rounded-full mr-3"></div>
-                      <span>Industrial Automation Certified</span>
+                      <div className="w-2 h-2 bg-[#D4AF37] rounded-full mr-3"></div>
+                      <span>Backend Developer at PgBee</span>
                     </li>
                     <li className="flex items-center">
-                      <div className="w-2 h-2 bg-amber-400 rounded-full mr-3"></div>
-                      <span>Full-Stack Developer</span>
+                      <div className="w-2 h-2 bg-[#D4AF37] rounded-full mr-3"></div>
+                      <span>RAG & Vector Search Specialist</span>
                     </li>
                   </ul>
                 </div>
@@ -675,7 +737,7 @@ function App() {
               {/* Skills */}
               <div>
                 <h3 className="text-4xl font-extrabold text-center mb-14 text-white tracking-tight">
-                  <span className="bg-gradient-to-r from-amber-400 via-yellow-500 to-amber-400 bg-clip-text text-transparent">
+                  <span className="bg-gradient-to-r from-#D4AF37 via-yellow-500 to-#D4AF37 bg-clip-text text-transparent">
                     ⚙️ Technical Arsenal
                   </span>
                 </h3>
@@ -689,10 +751,10 @@ function App() {
                       <div className="absolute top-0 left-0 w-full h-full rounded-2xl pointer-events-none border border-amber-500/10"></div>
 
                       <div className="flex items-center gap-3 mb-6">
-                        <div className="w-10 h-10 bg-amber-400/20 text-amber-300 flex items-center justify-center rounded-full text-xl">
+                        <div className="w-10 h-10 bg-#D4AF37/20 text-amber-300 flex items-center justify-center rounded-full text-xl">
                           {getCategoryIcon(category)}
                         </div>
-                        <h4 className="text-xl md:text-2xl font-semibold text-amber-400 tracking-wide">
+                        <h4 className="text-xl md:text-2xl font-semibold text-#D4AF37 tracking-wide">
                           {category}
                         </h4>
                       </div>
@@ -701,7 +763,7 @@ function App() {
                         {items.map((skill, index) => (
                           <span
                             key={index}
-                            className="px-4 py-2 rounded-full bg-gray-800/70 border border-gray-700 text-gray-200 text-sm font-medium shadow-sm hover:bg-amber-400/10 hover:text-amber-300 hover:shadow-md hover:shadow-amber-400/20 transition-all duration-300"
+                            className="px-4 py-2 rounded-full bg-gray-800/70 border border-gray-700 text-gray-200 text-sm font-medium shadow-sm hover:bg-#D4AF37/10 hover:text-amber-300 hover:shadow-md hover:shadow-#D4AF37/20 transition-all duration-300"
                           >
                             {skill}
                           </span>
@@ -722,22 +784,22 @@ function App() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">Professional Experience</h2>
-              <div className="w-24 h-1 bg-gradient-to-r from-yellow-400 to-yellow-600 mx-auto"></div>
+              <div className="w-24 h-1 bg-gradient-to-r from-#D4AF37 to-yellow-600 mx-auto"></div>
             </div>
 
             <div className="max-w-5xl mx-auto">
               {experiences.map((exp, index) => (
                 <div key={index} className="mb-8 group">
-                  <div className="bg-gray-900 border border-gray-700 rounded-xl p-8 hover:border-yellow-400/50 hover:bg-gray-800/50 transition-all duration-300">
+                  <div className="bg-gray-900 border border-gray-700 rounded-xl p-8 hover:border-#D4AF37/50 hover:bg-gray-800/50 transition-all duration-300">
                     <div className="flex items-start space-x-6">
                       <div className="flex-shrink-0">
-                        <div className="w-16 h-16 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                        <div className="w-16 h-16 bg-gradient-to-br from-#D4AF37 to-yellow-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                           <Briefcase className="text-black" size={28} />
                         </div>
                       </div>
                       <div className="flex-grow">
                         <h3 className="text-2xl font-bold text-white mb-2">{exp.role}</h3>
-                        <p className="text-xl font-semibold text-yellow-400 mb-3">{exp.company}</p>
+                        <p className="text-xl font-semibold text-#D4AF37 mb-3">{exp.company}</p>
                         <p className="text-gray-300 mb-4 leading-relaxed">{exp.description}</p>
                         <div className="flex flex-wrap gap-4 text-sm text-gray-400 mb-4">
                           <span className="flex items-center bg-black/50 px-3 py-1 rounded-full">
@@ -748,7 +810,7 @@ function App() {
                             <MapPin size={16} className="mr-2" />
                             {exp.location}
                           </span>
-                          <span className="px-3 py-1 bg-yellow-400/20 text-yellow-400 rounded-full text-xs font-bold">
+                          <span className="px-3 py-1 bg-#D4AF37/20 text-#D4AF37 rounded-full text-xs font-bold">
                             {exp.type}
                           </span>
                         </div>
@@ -756,7 +818,7 @@ function App() {
                           {exp.skills.map((skill, skillIndex) => (
                             <span
                               key={skillIndex}
-                              className="px-3 py-1 bg-yellow-400/10 text-yellow-400 border border-yellow-400/30 rounded-full text-sm font-medium"
+                              className="px-3 py-1 bg-#D4AF37/10 text-#D4AF37 border border-#D4AF37/30 rounded-full text-sm font-medium"
                             >
                               {skill}
                             </span>
@@ -776,22 +838,22 @@ function App() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">Academic Journey</h2>
-              <div className="w-24 h-1 bg-gradient-to-r from-yellow-400 to-yellow-600 mx-auto"></div>
+              <div className="w-24 h-1 bg-gradient-to-r from-#D4AF37 to-yellow-600 mx-auto"></div>
             </div>
 
             <div className="max-w-5xl mx-auto">
               {education.map((edu, index) => (
                 <div key={index} className="mb-8 group">
-                  <div className="bg-black/50 border border-gray-700 rounded-xl p-8 hover:border-yellow-400/50 hover:bg-black/70 transition-all duration-300">
+                  <div className="bg-black/50 border border-gray-700 rounded-xl p-8 hover:border-#D4AF37/50 hover:bg-black/70 transition-all duration-300">
                     <div className="flex items-start space-x-6">
                       <div className="flex-shrink-0">
-                        <div className="w-16 h-16 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                        <div className="w-16 h-16 bg-gradient-to-br from-#D4AF37 to-yellow-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                           <GraduationCap className="text-black" size={28} />
                         </div>
                       </div>
                       <div className="flex-grow">
                         <h3 className="text-2xl font-bold text-white mb-2">{edu.degree}</h3>
-                        <p className="text-xl font-semibold text-yellow-400 mb-3">{edu.institution}</p>
+                        <p className="text-xl font-semibold text-#D4AF37 mb-3">{edu.institution}</p>
                         <div className="flex flex-wrap gap-4 text-sm text-gray-400 mb-4">
                           <span className="flex items-center bg-gray-800 px-3 py-1 rounded-full">
                             <Calendar size={16} className="mr-2" />
@@ -805,7 +867,7 @@ function App() {
                           {edu.skills.map((skill, skillIndex) => (
                             <span
                               key={skillIndex}
-                              className="px-3 py-1 bg-yellow-400/10 text-yellow-400 border border-yellow-400/30 rounded-full text-sm font-medium"
+                              className="px-3 py-1 bg-#D4AF37/10 text-#D4AF37 border border-#D4AF37/30 rounded-full text-sm font-medium"
                             >
                               {skill}
                             </span>
@@ -825,29 +887,29 @@ function App() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">Featured Projects</h2>
-              <div className="w-24 h-1 bg-gradient-to-r from-yellow-400 to-yellow-600 mx-auto"></div>
+              <div className="w-24 h-1 bg-gradient-to-r from-#D4AF37 to-yellow-600 mx-auto"></div>
             </div>
 
             <div className="max-w-5xl mx-auto space-y-16">
               {projects.map((project, index) => (
                 <div
                   key={index}
-                  className="bg-gradient-to-br from-gray-900 to-black border border-yellow-400/30 rounded-2xl p-8 shadow-2xl shadow-yellow-400/10 hover:shadow-yellow-400/20 transition-all duration-300"
+                  className="bg-gradient-to-br from-gray-900 to-black border border-#D4AF37/30 rounded-2xl p-8 shadow-2xl shadow-#D4AF37/10 hover:shadow-#D4AF37/20 transition-all duration-300"
                 >
                   <div className="flex items-start space-x-6">
                     <div className="flex-shrink-0">
-                      <div className="w-20 h-20 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-2xl flex items-center justify-center">
+                      <div className="w-20 h-20 bg-gradient-to-br from-#D4AF37 to-yellow-600 rounded-2xl flex items-center justify-center">
                         <Code className="text-black" size={40} />
                       </div>
                     </div>
 
                     <div className="flex-grow">
                       <h3 className="text-3xl font-bold text-white mb-3">{project.title}</h3>
-                      <p className="text-yellow-400 font-semibold mb-1">{project.date}</p>
+                      <p className="text-#D4AF37 font-semibold mb-1">{project.date}</p>
                       <p className="text-gray-300 leading-relaxed text-lg mb-8">{project.description}</p>
 
                       <div className="mb-8">
-                        <h4 className="font-bold text-yellow-400 mb-4 text-xl">🚀 Key Features & Achievements:</h4>
+                        <h4 className="font-bold text-#D4AF37 mb-4 text-xl">🚀 Key Features & Achievements:</h4>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                           {project.features.map((feature, featureIndex) => (
                             <div
@@ -862,12 +924,12 @@ function App() {
                       </div>
 
                       <div>
-                        <h4 className="font-bold text-yellow-400 mb-4 text-lg">Technology Stack:</h4>
+                        <h4 className="font-bold text-#D4AF37 mb-4 text-lg">Technology Stack:</h4>
                         <div className="flex flex-wrap gap-3">
                           {project.techStack.map((tech, techIndex) => (
                             <span
                               key={techIndex}
-                              className="px-4 py-2 bg-yellow-400/20 text-yellow-400 border border-yellow-400/40 rounded-full text-sm font-bold hover:bg-yellow-400/30 transition-colors"
+                              className="px-4 py-2 bg-#D4AF37/20 text-#D4AF37 border border-#D4AF37/40 rounded-full text-sm font-bold hover:bg-#D4AF37/30 transition-colors"
                             >
                               {tech}
                             </span>
@@ -890,7 +952,7 @@ function App() {
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
                 Certifications & Achievements
               </h2>
-              <div className="w-24 h-1 bg-gradient-to-r from-yellow-400 to-yellow-600 mx-auto"></div>
+              <div className="w-24 h-1 bg-gradient-to-r from-#D4AF37 to-yellow-600 mx-auto"></div>
             </div>
 
             <div className="max-w-6xl mx-auto">
@@ -898,16 +960,16 @@ function App() {
                 {certifications.map((cert, index) => (
                   <div
                     key={index}
-                    className="group bg-black/50 border border-gray-700 rounded-xl p-6 hover:border-yellow-400/50 hover:bg-black/70 transition-all duration-300 hover:scale-105"
+                    className="group bg-black/50 border border-gray-700 rounded-xl p-6 hover:border-#D4AF37/50 hover:bg-black/70 transition-all duration-300 hover:scale-105"
                   >
                     <div className="flex items-start space-x-4">
                       <div className="flex-shrink-0">
-                        <div className="w-12 h-12 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                        <div className="w-12 h-12 bg-gradient-to-br from-#D4AF37 to-yellow-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                           <Award className="text-black" size={24} />
                         </div>
                       </div>
                       <div>
-                        <h3 className="font-bold text-white text-sm leading-tight group-hover:text-yellow-400 transition-colors">
+                        <h3 className="font-bold text-white text-sm leading-tight group-hover:text-#D4AF37 transition-colors">
                           {cert.title}
                         </h3>
                         <p className="text-xs mt-2 text-gray-400">{cert.issuer} • {cert.date}</p>
@@ -929,14 +991,14 @@ function App() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="text-center mb-14">
               <h2 className="text-4xl md:text-5xl font-extrabold text-white mb-4">Let's Connect</h2>
-              <div className="w-20 h-1 bg-gradient-to-r from-amber-400 to-amber-600 mx-auto rounded"></div>
+              <div className="w-20 h-1 bg-gradient-to-r from-#D4AF37 to-amber-600 mx-auto rounded"></div>
             </div>
 
             <div className="max-w-3xl mx-auto text-center">
               <p className="text-xl md:text-2xl text-gray-300 mb-12 leading-relaxed">
-                Whether you're exploring <span className="text-amber-400 font-semibold">collaborations</span>, 
-                seeking <span className="text-amber-400 font-semibold">talent</span>, or just want to talk tech—
-                <span className="text-amber-400 font-semibold"> let's connect and create together!</span>
+                Whether you're exploring <span className="text-#D4AF37 font-semibold">collaborations</span>, 
+                seeking <span className="text-#D4AF37 font-semibold">talent</span>, or just want to talk tech—
+                <span className="text-#D4AF37 font-semibold"> let's connect and create together!</span>
               </p>
 
               <div className="flex flex-col sm:flex-row gap-6 justify-center mb-14">
@@ -944,7 +1006,7 @@ function App() {
                   href="https://www.linkedin.com/in/jil-varghese-palliyan/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group inline-flex items-center px-8 py-4 bg-amber-400 text-black font-semibold rounded-xl hover:bg-amber-300 transition-all duration-300 shadow-xl hover:shadow-amber-400/40 hover:scale-[1.03]"
+                  className="group inline-flex items-center px-8 py-4 bg-#D4AF37 text-black font-semibold rounded-xl hover:bg-amber-300 transition-all duration-300 shadow-xl hover:shadow-#D4AF37/40 hover:scale-[1.03]"
                 >
                   <Linkedin className="mr-3 group-hover:scale-110 transition-transform" size={26} />
                   LinkedIn
@@ -954,7 +1016,7 @@ function App() {
                   href="https://github.com/JVP555"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group inline-flex items-center px-8 py-4 border-2 border-amber-400 text-amber-400 font-semibold rounded-xl hover:bg-amber-400 hover:text-black transition-all duration-300 hover:scale-[1.03]"
+                  className="group inline-flex items-center px-8 py-4 border-2 border-#D4AF37 text-#D4AF37 font-semibold rounded-xl hover:bg-#D4AF37 hover:text-black transition-all duration-300 hover:scale-[1.03]"
                 >
                   <Github className="mr-3 group-hover:scale-110 transition-transform" size={26} />
                   GitHub
@@ -962,15 +1024,15 @@ function App() {
                 </a>
               </div>
 
-              <div className="bg-gradient-to-r from-amber-400/10 to-amber-600/10 backdrop-blur-sm rounded-xl p-6 border border-amber-400/20">
+              <div className="bg-gradient-to-r from-#D4AF37/10 to-amber-600/10 backdrop-blur-sm rounded-xl p-6 border border-#D4AF37/20">
                 <div className="flex items-center justify-center space-x-3 text-white mb-4">
-                  <MapPin size={22} className="text-amber-400" />
+                  <MapPin size={22} className="text-#D4AF37" />
                   <span className="text-lg font-medium">Ernakulam, Kerala, India</span>
                 </div>
                 <p className="text-gray-300 text-base">
-                  Open to roles in <span className="text-amber-400 font-medium">Software Development</span>, 
-                  <span className="text-amber-400 font-medium"> Data Science</span>, and 
-                  <span className="text-amber-400 font-medium"> Industrial Automation</span>
+                  Open to roles in <span className="text-#D4AF37 font-medium">Software Development</span>, 
+                  <span className="text-#D4AF37 font-medium"> Data Science</span>, and 
+                  <span className="text-#D4AF37 font-medium"> Industrial Automation</span>
                 </p>
               </div>
             </div>
@@ -980,11 +1042,11 @@ function App() {
       </main>
 
       {/* Footer */}
-      <footer className="bg-black border-t border-yellow-400/20 py-8">
+      <footer className="bg-black border-t border-#D4AF37/20 py-8">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <p className="text-gray-400">
-              © 2025 <span className="text-yellow-400 font-semibold">JIL VARGHESE PALLIYAN</span>. 
+              © 2025 <span className="text-#D4AF37 font-semibold">JIL VARGHESE PALLIYAN</span>. 
               Designed with passion and precision.
             </p>
           </div>
