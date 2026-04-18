@@ -550,11 +550,11 @@ function App() {
   return (
     <div className="min-h-screen bg-black text-white">
       {/* Navigation */}
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-black/95 backdrop-blur-md border-b border-yellow-500/20">
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-black/95 backdrop-blur-md border-b border-#C5A028/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex-shrink-0">
-              <h1 className="text-2xl font-bold bg-gradient-to-r from-#D4AF37 to-yellow-600 bg-clip-text text-transparent">
+              <h1 className="text-2xl font-bold bg-gradient-to-r from-#D4AF37 to-#8B7020 bg-clip-text text-transparent">
                 JVP
               </h1>
             </div>
@@ -580,7 +580,7 @@ function App() {
             <div className="md:hidden">
               <button
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
-                className="inline-flex items-center justify-center p-2 rounded-md text-gray-300 hover:text-#D4AF37 hover:bg-gray-900 transition-colors"
+                className="inline-flex items-center justify-center p-2 rounded-md text-gray-300 hover:text-[#D4AF37] hover:bg-gray-900 transition-colors"
               >
                 {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
               </button>
@@ -591,15 +591,15 @@ function App() {
         {/* Mobile menu */}
         {isMenuOpen && (
           <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-black/95 border-t border-yellow-500/20">
+            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-black/95 border-t border-#C5A028/20">
               {navigation.map((item) => (
                 <button
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
                   className={`block px-3 py-2 rounded-md text-base font-medium w-full text-left transition-colors ${
                     activeSection === item.id
-                      ? 'text-black bg-#D4AF37'
-                      : 'text-gray-300 hover:text-#D4AF37 hover:bg-gray-900'
+                      ? 'text-black bg-[#D4AF37]'
+                      : 'text-gray-300 hover:text-[#D4AF37] hover:bg-gray-900'
                   }`}
                 >
                   {item.label}
@@ -613,7 +613,7 @@ function App() {
       <main>
         {/* Hero Section */}
         <section id="home" className="pt-8 min-h-screen flex items-center relative overflow-hidden bg-gradient-to-br from-gray-950 via-black to-gray-900">
-          <div className="absolute inset-0 bg-gradient-to-br from-amber-300/10 via-transparent to-amber-500/10 pointer-events-none"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-#C5A028/10 via-transparent to-#8B7020/10 pointer-events-none"></div>
 
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative z-10">
             <div className="text-center">
@@ -651,7 +651,7 @@ function App() {
                   href="https://www.linkedin.com/in/jil-varghese-palliyan/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group inline-flex items-center px-8 py-4 bg-#D4AF37 text-black font-semibold rounded-lg hover:bg-amber-300 transition-all duration-300 shadow-md hover:shadow-amber-500/40 hover:scale-[1.03]"
+                  className="group inline-flex items-center px-8 py-4 bg-[#D4AF37] text-black font-semibold rounded-lg hover:bg-[#C5A028] transition-all duration-300 shadow-md hover:shadow-#8B7020/40 hover:scale-[1.03]"
                 >
                   <Linkedin className="mr-3 group-hover:scale-110 transition-transform" size={24} />
                   Connect on LinkedIn
@@ -662,7 +662,7 @@ function App() {
                   href="https://github.com/JVP555"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group inline-flex items-center px-8 py-4 border-2 border-#D4AF37 text-#D4AF37 font-semibold rounded-lg hover:bg-#D4AF37 hover:text-black transition-all duration-300 hover:scale-[1.03]"
+                  className="group inline-flex items-center px-8 py-4 border-2 border-[#D4AF37] text-[#D4AF37] font-semibold rounded-lg hover:bg-[#D4AF37] hover:text-black transition-all duration-300 hover:scale-[1.03]"
                 >
                   <Github className="mr-3 group-hover:scale-110 transition-transform" size={24} />
                   View GitHub
@@ -672,7 +672,7 @@ function App() {
 
               <button
                 onClick={() => scrollToSection('about')}
-                className="animate-bounce text-#D4AF37 hover:text-amber-300 transition-colors"
+                className="animate-bounce text-[#D4AF37] hover:text-#C5A028 transition-colors"
               >
                 <ChevronDown size={40} />
               </button>
@@ -685,20 +685,20 @@ function App() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">About Me</h2>
-              <div className="w-24 h-1 bg-gradient-to-r from-#D4AF37 to-amber-600 mx-auto"></div>
+              <div className="w-24 h-1 bg-gradient-to-r from-#D4AF37 to-#8B7020 mx-auto"></div>
             </div>
 
             <div className="max-w-5xl mx-auto">
-              <div className="bg-gradient-to-r from-#D4AF37/10 to-amber-600/10 rounded-2xl p-8 mb-12 border border-#D4AF37/20">
+              <div className="bg-gradient-to-r from-#D4AF37/10 to-#8B7020/10 rounded-2xl p-8 mb-12 border border-[#D4AF37]/20">
                 <blockquote className="text-2xl md:text-3xl font-medium text-white text-center italic mb-6">
                   "It's okay to be known as the joker—it's the only card that can substitute any other."
                 </blockquote>
-                <p className="text-center text-#D4AF37 font-bold text-lg">— JIL</p>
+                <p className="text-center text-[#D4AF37] font-bold text-lg">— JIL</p>
               </div>
 
               <div className="grid md:grid-cols-2 gap-12 items-start mb-20">
                 <div>
-                  <h3 className="text-2xl font-bold text-#D4AF37 mb-6">My Philosophy</h3>
+                  <h3 className="text-2xl font-bold text-[#D4AF37] mb-6">My Philosophy</h3>
                   <p className="text-lg leading-relaxed text-gray-300 mb-6">
                     As a Computer Science Engineering student with a passion for automation, creativity, and adaptability, 
                     I see myself not just as a builder of solutions, but as a wildcard—ready to take on any role, 
@@ -711,7 +711,7 @@ function App() {
                   </p>
                 </div>
 
-                <div className="bg-black/50 rounded-xl p-8 border border-#D4AF37/20 shadow-inner shadow-amber-300/5">
+                <div className="bg-black/50 rounded-xl p-8 border border-[#D4AF37]/20 shadow-inner shadow-#C5A028/5">
                   <h3 className="text-2xl font-bold text-[#D4AF37] mb-6">Quick Facts</h3>
                   <ul className="space-y-4 text-gray-300">
                     <li className="flex items-center">
@@ -737,7 +737,7 @@ function App() {
               {/* Skills */}
               <div>
                 <h3 className="text-4xl font-extrabold text-center mb-14 text-white tracking-tight">
-                  <span className="bg-gradient-to-r from-#D4AF37 via-yellow-500 to-#D4AF37 bg-clip-text text-transparent">
+                  <span className="bg-gradient-to-r from-#D4AF37 via-#C5A028 to-#D4AF37 bg-clip-text text-transparent">
                     ⚙️ Technical Arsenal
                   </span>
                 </h3>
@@ -746,15 +746,15 @@ function App() {
                   {Object.entries(skillGroups).map(([category, items], idx) => (
                     <div
                       key={idx}
-                      className="relative bg-gray-900/60 backdrop-blur-md border border-gray-800 rounded-2xl p-6 shadow-lg hover:shadow-amber-500/20 transition-shadow duration-300"
+                      className="relative bg-gray-900/60 backdrop-blur-md border border-gray-800 rounded-2xl p-6 shadow-lg hover:shadow-#8B7020/20 transition-shadow duration-300"
                     >
-                      <div className="absolute top-0 left-0 w-full h-full rounded-2xl pointer-events-none border border-amber-500/10"></div>
+                      <div className="absolute top-0 left-0 w-full h-full rounded-2xl pointer-events-none border border-#8B7020/10"></div>
 
                       <div className="flex items-center gap-3 mb-6">
-                        <div className="w-10 h-10 bg-#D4AF37/20 text-amber-300 flex items-center justify-center rounded-full text-xl">
+                        <div className="w-10 h-10 bg-[#D4AF37]/20 text-#C5A028 flex items-center justify-center rounded-full text-xl">
                           {getCategoryIcon(category)}
                         </div>
-                        <h4 className="text-xl md:text-2xl font-semibold text-#D4AF37 tracking-wide">
+                        <h4 className="text-xl md:text-2xl font-semibold text-[#D4AF37] tracking-wide">
                           {category}
                         </h4>
                       </div>
@@ -763,7 +763,7 @@ function App() {
                         {items.map((skill, index) => (
                           <span
                             key={index}
-                            className="px-4 py-2 rounded-full bg-gray-800/70 border border-gray-700 text-gray-200 text-sm font-medium shadow-sm hover:bg-#D4AF37/10 hover:text-amber-300 hover:shadow-md hover:shadow-#D4AF37/20 transition-all duration-300"
+                            className="px-4 py-2 rounded-full bg-gray-800/70 border border-gray-700 text-gray-200 text-sm font-medium shadow-sm hover:bg-[#D4AF37]/10 hover:text-#C5A028 hover:shadow-md hover:shadow-#D4AF37/20 transition-all duration-300"
                           >
                             {skill}
                           </span>
@@ -784,22 +784,22 @@ function App() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">Professional Experience</h2>
-              <div className="w-24 h-1 bg-gradient-to-r from-#D4AF37 to-yellow-600 mx-auto"></div>
+              <div className="w-24 h-1 bg-gradient-to-r from-#D4AF37 to-#8B7020 mx-auto"></div>
             </div>
 
             <div className="max-w-5xl mx-auto">
               {experiences.map((exp, index) => (
                 <div key={index} className="mb-8 group">
-                  <div className="bg-gray-900 border border-gray-700 rounded-xl p-8 hover:border-#D4AF37/50 hover:bg-gray-800/50 transition-all duration-300">
+                  <div className="bg-gray-900 border border-gray-700 rounded-xl p-8 hover:border-[#D4AF37]/50 hover:bg-gray-800/50 transition-all duration-300">
                     <div className="flex items-start space-x-6">
                       <div className="flex-shrink-0">
-                        <div className="w-16 h-16 bg-gradient-to-br from-#D4AF37 to-yellow-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                        <div className="w-16 h-16 bg-gradient-to-br from-#D4AF37 to-#8B7020 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                           <Briefcase className="text-black" size={28} />
                         </div>
                       </div>
                       <div className="flex-grow">
                         <h3 className="text-2xl font-bold text-white mb-2">{exp.role}</h3>
-                        <p className="text-xl font-semibold text-#D4AF37 mb-3">{exp.company}</p>
+                        <p className="text-xl font-semibold text-[#D4AF37] mb-3">{exp.company}</p>
                         <p className="text-gray-300 mb-4 leading-relaxed">{exp.description}</p>
                         <div className="flex flex-wrap gap-4 text-sm text-gray-400 mb-4">
                           <span className="flex items-center bg-black/50 px-3 py-1 rounded-full">
@@ -810,7 +810,7 @@ function App() {
                             <MapPin size={16} className="mr-2" />
                             {exp.location}
                           </span>
-                          <span className="px-3 py-1 bg-#D4AF37/20 text-#D4AF37 rounded-full text-xs font-bold">
+                          <span className="px-3 py-1 bg-[#D4AF37]/20 text-[#D4AF37] rounded-full text-xs font-bold">
                             {exp.type}
                           </span>
                         </div>
@@ -818,7 +818,7 @@ function App() {
                           {exp.skills.map((skill, skillIndex) => (
                             <span
                               key={skillIndex}
-                              className="px-3 py-1 bg-#D4AF37/10 text-#D4AF37 border border-#D4AF37/30 rounded-full text-sm font-medium"
+                              className="px-3 py-1 bg-[#D4AF37]/10 text-[#D4AF37] border border-[#D4AF37]/30 rounded-full text-sm font-medium"
                             >
                               {skill}
                             </span>
@@ -838,22 +838,22 @@ function App() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">Academic Journey</h2>
-              <div className="w-24 h-1 bg-gradient-to-r from-#D4AF37 to-yellow-600 mx-auto"></div>
+              <div className="w-24 h-1 bg-gradient-to-r from-#D4AF37 to-#8B7020 mx-auto"></div>
             </div>
 
             <div className="max-w-5xl mx-auto">
               {education.map((edu, index) => (
                 <div key={index} className="mb-8 group">
-                  <div className="bg-black/50 border border-gray-700 rounded-xl p-8 hover:border-#D4AF37/50 hover:bg-black/70 transition-all duration-300">
+                  <div className="bg-black/50 border border-gray-700 rounded-xl p-8 hover:border-[#D4AF37]/50 hover:bg-black/70 transition-all duration-300">
                     <div className="flex items-start space-x-6">
                       <div className="flex-shrink-0">
-                        <div className="w-16 h-16 bg-gradient-to-br from-#D4AF37 to-yellow-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                        <div className="w-16 h-16 bg-gradient-to-br from-#D4AF37 to-#8B7020 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                           <GraduationCap className="text-black" size={28} />
                         </div>
                       </div>
                       <div className="flex-grow">
                         <h3 className="text-2xl font-bold text-white mb-2">{edu.degree}</h3>
-                        <p className="text-xl font-semibold text-#D4AF37 mb-3">{edu.institution}</p>
+                        <p className="text-xl font-semibold text-[#D4AF37] mb-3">{edu.institution}</p>
                         <div className="flex flex-wrap gap-4 text-sm text-gray-400 mb-4">
                           <span className="flex items-center bg-gray-800 px-3 py-1 rounded-full">
                             <Calendar size={16} className="mr-2" />
@@ -867,7 +867,7 @@ function App() {
                           {edu.skills.map((skill, skillIndex) => (
                             <span
                               key={skillIndex}
-                              className="px-3 py-1 bg-#D4AF37/10 text-#D4AF37 border border-#D4AF37/30 rounded-full text-sm font-medium"
+                              className="px-3 py-1 bg-[#D4AF37]/10 text-[#D4AF37] border border-[#D4AF37]/30 rounded-full text-sm font-medium"
                             >
                               {skill}
                             </span>
@@ -887,29 +887,29 @@ function App() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">Featured Projects</h2>
-              <div className="w-24 h-1 bg-gradient-to-r from-#D4AF37 to-yellow-600 mx-auto"></div>
+              <div className="w-24 h-1 bg-gradient-to-r from-#D4AF37 to-#8B7020 mx-auto"></div>
             </div>
 
             <div className="max-w-5xl mx-auto space-y-16">
               {projects.map((project, index) => (
                 <div
                   key={index}
-                  className="bg-gradient-to-br from-gray-900 to-black border border-#D4AF37/30 rounded-2xl p-8 shadow-2xl shadow-#D4AF37/10 hover:shadow-#D4AF37/20 transition-all duration-300"
+                  className="bg-gradient-to-br from-gray-900 to-black border border-[#D4AF37]/30 rounded-2xl p-8 shadow-2xl shadow-#D4AF37/10 hover:shadow-#D4AF37/20 transition-all duration-300"
                 >
                   <div className="flex items-start space-x-6">
                     <div className="flex-shrink-0">
-                      <div className="w-20 h-20 bg-gradient-to-br from-#D4AF37 to-yellow-600 rounded-2xl flex items-center justify-center">
+                      <div className="w-20 h-20 bg-gradient-to-br from-#D4AF37 to-#8B7020 rounded-2xl flex items-center justify-center">
                         <Code className="text-black" size={40} />
                       </div>
                     </div>
 
                     <div className="flex-grow">
                       <h3 className="text-3xl font-bold text-white mb-3">{project.title}</h3>
-                      <p className="text-#D4AF37 font-semibold mb-1">{project.date}</p>
+                      <p className="text-[#D4AF37] font-semibold mb-1">{project.date}</p>
                       <p className="text-gray-300 leading-relaxed text-lg mb-8">{project.description}</p>
 
                       <div className="mb-8">
-                        <h4 className="font-bold text-#D4AF37 mb-4 text-xl">🚀 Key Features & Achievements:</h4>
+                        <h4 className="font-bold text-[#D4AF37] mb-4 text-xl">🚀 Key Features & Achievements:</h4>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                           {project.features.map((feature, featureIndex) => (
                             <div
@@ -924,12 +924,12 @@ function App() {
                       </div>
 
                       <div>
-                        <h4 className="font-bold text-#D4AF37 mb-4 text-lg">Technology Stack:</h4>
+                        <h4 className="font-bold text-[#D4AF37] mb-4 text-lg">Technology Stack:</h4>
                         <div className="flex flex-wrap gap-3">
                           {project.techStack.map((tech, techIndex) => (
                             <span
                               key={techIndex}
-                              className="px-4 py-2 bg-#D4AF37/20 text-#D4AF37 border border-#D4AF37/40 rounded-full text-sm font-bold hover:bg-#D4AF37/30 transition-colors"
+                              className="px-4 py-2 bg-[#D4AF37]/20 text-[#D4AF37] border border-[#D4AF37]/40 rounded-full text-sm font-bold hover:bg-[#D4AF37]/30 transition-colors"
                             >
                               {tech}
                             </span>
@@ -952,7 +952,7 @@ function App() {
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
                 Certifications & Achievements
               </h2>
-              <div className="w-24 h-1 bg-gradient-to-r from-#D4AF37 to-yellow-600 mx-auto"></div>
+              <div className="w-24 h-1 bg-gradient-to-r from-#D4AF37 to-#8B7020 mx-auto"></div>
             </div>
 
             <div className="max-w-6xl mx-auto">
@@ -960,21 +960,21 @@ function App() {
                 {certifications.map((cert, index) => (
                   <div
                     key={index}
-                    className="group bg-black/50 border border-gray-700 rounded-xl p-6 hover:border-#D4AF37/50 hover:bg-black/70 transition-all duration-300 hover:scale-105"
+                    className="group bg-black/50 border border-gray-700 rounded-xl p-6 hover:border-[#D4AF37]/50 hover:bg-black/70 transition-all duration-300 hover:scale-105"
                   >
                     <div className="flex items-start space-x-4">
                       <div className="flex-shrink-0">
-                        <div className="w-12 h-12 bg-gradient-to-br from-#D4AF37 to-yellow-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                        <div className="w-12 h-12 bg-gradient-to-br from-#D4AF37 to-#8B7020 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                           <Award className="text-black" size={24} />
                         </div>
                       </div>
                       <div>
-                        <h3 className="font-bold text-white text-sm leading-tight group-hover:text-#D4AF37 transition-colors">
+                        <h3 className="font-bold text-white text-sm leading-tight group-hover:text-[#D4AF37] transition-colors">
                           {cert.title}
                         </h3>
                         <p className="text-xs mt-2 text-gray-400">{cert.issuer} • {cert.date}</p>
                         {cert.credentialId && (
-                          <p className="text-xs text-yellow-600 mt-2">ID: {cert.credentialId}</p>
+                          <p className="text-xs text-#8B7020 mt-2">ID: {cert.credentialId}</p>
                         )}
                       </div>
                     </div>
@@ -987,18 +987,18 @@ function App() {
 
         {/* Contact Section */}
         <section id="contact" className="py-20 bg-gradient-to-br from-gray-950 via-gray-900 to-black relative overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-br from-amber-300/5 via-transparent to-amber-600/5 pointer-events-none"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-#C5A028/5 via-transparent to-#8B7020/5 pointer-events-none"></div>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="text-center mb-14">
               <h2 className="text-4xl md:text-5xl font-extrabold text-white mb-4">Let's Connect</h2>
-              <div className="w-20 h-1 bg-gradient-to-r from-#D4AF37 to-amber-600 mx-auto rounded"></div>
+              <div className="w-20 h-1 bg-gradient-to-r from-#D4AF37 to-#8B7020 mx-auto rounded"></div>
             </div>
 
             <div className="max-w-3xl mx-auto text-center">
               <p className="text-xl md:text-2xl text-gray-300 mb-12 leading-relaxed">
-                Whether you're exploring <span className="text-#D4AF37 font-semibold">collaborations</span>, 
-                seeking <span className="text-#D4AF37 font-semibold">talent</span>, or just want to talk tech—
-                <span className="text-#D4AF37 font-semibold"> let's connect and create together!</span>
+                Whether you're exploring <span className="text-[#D4AF37] font-semibold">collaborations</span>, 
+                seeking <span className="text-[#D4AF37] font-semibold">talent</span>, or just want to talk tech—
+                <span className="text-[#D4AF37] font-semibold"> let's connect and create together!</span>
               </p>
 
               <div className="flex flex-col sm:flex-row gap-6 justify-center mb-14">
@@ -1006,7 +1006,7 @@ function App() {
                   href="https://www.linkedin.com/in/jil-varghese-palliyan/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group inline-flex items-center px-8 py-4 bg-#D4AF37 text-black font-semibold rounded-xl hover:bg-amber-300 transition-all duration-300 shadow-xl hover:shadow-#D4AF37/40 hover:scale-[1.03]"
+                  className="group inline-flex items-center px-8 py-4 bg-[#D4AF37] text-black font-semibold rounded-xl hover:bg-[#C5A028] transition-all duration-300 shadow-xl hover:shadow-#D4AF37/40 hover:scale-[1.03]"
                 >
                   <Linkedin className="mr-3 group-hover:scale-110 transition-transform" size={26} />
                   LinkedIn
@@ -1016,7 +1016,7 @@ function App() {
                   href="https://github.com/JVP555"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group inline-flex items-center px-8 py-4 border-2 border-#D4AF37 text-#D4AF37 font-semibold rounded-xl hover:bg-#D4AF37 hover:text-black transition-all duration-300 hover:scale-[1.03]"
+                  className="group inline-flex items-center px-8 py-4 border-2 border-[#D4AF37] text-[#D4AF37] font-semibold rounded-xl hover:bg-[#D4AF37] hover:text-black transition-all duration-300 hover:scale-[1.03]"
                 >
                   <Github className="mr-3 group-hover:scale-110 transition-transform" size={26} />
                   GitHub
@@ -1024,15 +1024,15 @@ function App() {
                 </a>
               </div>
 
-              <div className="bg-gradient-to-r from-#D4AF37/10 to-amber-600/10 backdrop-blur-sm rounded-xl p-6 border border-#D4AF37/20">
+              <div className="bg-gradient-to-r from-#D4AF37/10 to-#8B7020/10 backdrop-blur-sm rounded-xl p-6 border border-[#D4AF37]/20">
                 <div className="flex items-center justify-center space-x-3 text-white mb-4">
-                  <MapPin size={22} className="text-#D4AF37" />
+                  <MapPin size={22} className="text-[#D4AF37]" />
                   <span className="text-lg font-medium">Ernakulam, Kerala, India</span>
                 </div>
                 <p className="text-gray-300 text-base">
-                  Open to roles in <span className="text-#D4AF37 font-medium">Software Development</span>, 
-                  <span className="text-#D4AF37 font-medium"> Data Science</span>, and 
-                  <span className="text-#D4AF37 font-medium"> Industrial Automation</span>
+                  Open to roles in <span className="text-[#D4AF37] font-medium">Software Development</span>, 
+                  <span className="text-[#D4AF37] font-medium"> Data Science</span>, and 
+                  <span className="text-[#D4AF37] font-medium"> Industrial Automation</span>
                 </p>
               </div>
             </div>
@@ -1042,11 +1042,11 @@ function App() {
       </main>
 
       {/* Footer */}
-      <footer className="bg-black border-t border-#D4AF37/20 py-8">
+      <footer className="bg-black border-t border-[#D4AF37]/20 py-8">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <p className="text-gray-400">
-              © 2025 <span className="text-#D4AF37 font-semibold">JIL VARGHESE PALLIYAN</span>. 
+              © 2025 <span className="text-[#D4AF37] font-semibold">JIL VARGHESE PALLIYAN</span>. 
               Designed with passion and precision.
             </p>
           </div>
